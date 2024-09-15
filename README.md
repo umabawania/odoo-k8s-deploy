@@ -1,1 +1,0 @@
-# Odoo-k8s-deploymentFile
