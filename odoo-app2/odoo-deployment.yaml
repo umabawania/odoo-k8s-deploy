@@ -15,6 +15,9 @@ spec:
         app: odoo
     spec:
       volumes:
+      - name: odoo-custom-addons
+        persistentVolumeClaim:
+          claimName: postgresql-data-claim
       - name: odoo-config-volume
         configMap:
            name: odoo-config
@@ -26,6 +29,8 @@ spec:
           - -i
           - base
         volumeMounts:
+        - name: odoo-custom-addons
+          mountPath: /mnt/extra-addons
         - name: odoo-config-volume
           mountPath: /etc/odoo/odoo.conf
           subPath: odoo.conf
