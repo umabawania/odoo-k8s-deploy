@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   odoo.conf: "[options]\r\ndata_dir = /var/lib/odoo\r\naddons_path = /usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons\r\ndb_name      
-    = postgresdb\r\ndb_host = postgres\r\ndb_port = 5432\r\ndb_user = admin\r\ndb_password
+    = False\r\ndb_host = postgres\r\ndb_port = 5432\r\ndb_user = admin\r\ndb_password
     = root\r\ndb_template = template1\r\nxmlrpc_port = 8069\r\nlongpolling_port =
     8072\r\nworkers = 0\r\nlogfile = /var/log/odoo/odoo.log\r\nlog_level = info\r\nxmlrpcs
     = True\r\nxmlrpcs_port = 8071\r\n"
