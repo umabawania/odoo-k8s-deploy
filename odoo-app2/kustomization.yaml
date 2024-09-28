@@ -3,6 +3,6 @@ resources:
   - odoo-config.yaml
   - pv.yaml
   - pvc.yaml
-  - odoo-pvc.yaml
+  #- odoo-pvc.yaml
   - postgres.yaml
   - odoo-deployment.yaml
