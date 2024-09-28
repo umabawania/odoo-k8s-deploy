@@ -1,7 +1,8 @@
 resources:
   - postgres-config.yaml
-  #- odoo-config.yaml
+  - odoo-config.yaml
   - pv.yaml
   - pvc.yaml
+  - odoo-pvc.yaml
   - postgres.yaml
   - odoo-deployment.yaml

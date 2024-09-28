@@ -17,10 +17,10 @@ spec:
       volumes:
       - name: odoo-custom-addons
         persistentVolumeClaim:
-          claimName: postgresql-data-claim
-      #- name: odoo-config-volume
-      #  configMap:
-      #     name: odoo-config
+          claimName: odoo-data-claim
+      - name: odoo-config-volume
+        configMap:
+           name: odoo-config
       containers:
       - name: odoo
         image: odoo:16
@@ -31,10 +31,10 @@ spec:
         volumeMounts:
         - name: odoo-custom-addons
           mountPath: /mnt/extra-addons
-        #- name: odoo-config-volume
-        #  mountPath: /etc/odoo/odoo.conf
-        #  subPath: odoo.conf
-        #  readOnly: false
+        - name: odoo-config-volume
+          mountPath: /etc/odoo/odoo.conf
+          subPath: odoo.conf
+          readOnly: true
         securityContext:
           runAsUser: 0
         ports:
