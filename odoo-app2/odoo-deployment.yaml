@@ -23,7 +23,7 @@ spec:
            name: odoo-config
       containers:
       - name: odoo
-        image: odoo:16
+        image: public.ecr.aws/g1t1m4r7/odoo16:latest
         command:
           - odoo
           - -i
